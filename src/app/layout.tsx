@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { museoSans } from "@/config/myFonts";
+import StoreProvider from "@/store/Providers";
 
  
 // Font files can be colocated inside of `pages`
@@ -17,7 +18,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={museoSans.className}>{children}</body>
+      <body className={museoSans.className}>
+        <StoreProvider>
+        {children}
+        </StoreProvider>
+      </body>
     </html>
   );
 }
