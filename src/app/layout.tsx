@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { museoSans } from "@/config/myFonts";
+import { museoSans } from "@/config";
 import StoreProvider from "@/store/Providers";
 
  

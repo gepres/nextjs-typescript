@@ -7,7 +7,7 @@ export default function Home() {
   // const { mobile } = useAppSelector(state => state.breakPoints)
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      hola
+      <h1 className="text-green_default text-7xl font-bold">hola</h1>
       <br />
       {JSON.stringify(isXs)}
       <br />

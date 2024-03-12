@@ -28,4 +28,5 @@ export const  museoSans = localFont({
       style: 'rounded',
     }
   ],
+  variable: '--font-museosans'
 })
