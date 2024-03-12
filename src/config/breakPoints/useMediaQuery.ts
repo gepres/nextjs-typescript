@@ -20,7 +20,6 @@ export function useMediaQuery(query: any) {
   return matches;
 } 
 
-
 export const deviceMobile = () => {
   let dispositivo
     if (typeof window !== 'undefined') {
@@ -48,13 +47,28 @@ export const deviceMobileAndTablet = () => {
   return dispositivo
 }
 
+function MobileOrientation(position = 'landscape') {
+  const [orientation, setOrientation] = useState(false);
+  useEffect(
+    () => {
+      if (typeof window !== 'undefined') {
+        const mediaQuery = window.matchMedia(`(orientation:${position} )`)
+        setOrientation(mediaQuery.matches);
+        const handler = (event :any) => setOrientation(event.matches);
+        mediaQuery.addEventListener("change", handler);
+        return () => mediaQuery.removeEventListener("change", handler);
+      }
+    },
+    []
+  );
+  return orientation;
+} 
+
 export const deviceDesktop = () => {
   let dispositivo
-  // const { isLandscape } = useMobileOrientation()
-  // console.log('useMobileOrientation ',useMobileOrientation() );
-  
+  const isLandscape = MobileOrientation('landscape')
   if (typeof window !== 'undefined') {
-    dispositivo = isDesktop
+    dispositivo = isDesktop && isLandscape
   }
 
   return dispositivo

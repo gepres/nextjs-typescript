@@ -2,7 +2,7 @@
 import { useBreakpoints } from "@/config";;
 
 export default function Home() {
-  const {isXs,active, dispositivo} = useBreakpoints();
+  const {isXs,active} = useBreakpoints();
   // const dispatch = useAppDispatch()
   // const { mobile } = useAppSelector(state => state.breakPoints)
   return (
@@ -13,11 +13,10 @@ export default function Home() {
       <br />
       {active}
       <br />
-      {dispositivo}
       {/* {JSON.stringify(mobile)} */}
       {/* {JSON.stringify(isMobileAndTable)} */}
       <code className='flex-wrap'>
-        {JSON.stringify(useBreakpoints())}
+        {/* {JSON.stringify(useBreakpoints())} */}
       </code>
     </main>
   );

@@ -15,7 +15,7 @@ export const  useBreakpoints = () => {
     isMobileAndTable: useMediaQuery("(max-width: 1024px)") ?? deviceMobileAndTablet(),
     isDesktop: deviceDesktop(),
     active: "xs",
-    dispositivo: "mobile"
+    // dispositivo: "mobile"
   };
 
   if (breakpoints.isXs) breakpoints.active = "xs";
