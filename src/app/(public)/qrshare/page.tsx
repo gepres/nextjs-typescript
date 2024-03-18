@@ -1,5 +1,7 @@
+import  '@/assets/styles/scss/pages/(public)/qrshare.scss'
+
 export default function page() {
   return (
-    <div>qrsharePage</div>
+    <div className="text-nigga">qrsharePage</div>
   )
 }

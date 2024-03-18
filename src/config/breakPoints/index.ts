@@ -14,8 +14,7 @@ export const  useBreakpoints = () => {
     isTablet: useMediaQuery("(max-width: 1024px)") ?? deviceTablet(),
     isMobileAndTable: useMediaQuery("(max-width: 1024px)") ?? deviceMobileAndTablet(),
     isDesktop: deviceDesktop(),
-    active: "xs",
-    // dispositivo: "mobile"
+    active: "xs"
   };
 
   if (breakpoints.isXs) breakpoints.active = "xs";
@@ -24,9 +23,6 @@ export const  useBreakpoints = () => {
   if (breakpoints.isLg) breakpoints.active = "lg";
   if (breakpoints.isXl) breakpoints.active = "xl";
   if (breakpoints.is2xl) breakpoints.active = "xxl";
-  // if (breakpoints.isMobile) breakpoints.dispositivo = "mobile";
-  // if (breakpoints.isTablet) breakpoints.dispositivo = "tablet";
-  // if (breakpoints.isDesktop) breakpoints.dispositivo = "desktop";
   
   return breakpoints;
 }

@@ -1,11 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit'
 import { useDispatch, useSelector, useStore } from 'react-redux'
 import type { TypedUseSelectorHook } from 'react-redux'
-import BreakpointsSlice from "./general/breakPoints"
+import GeneralSlice from "./general/general"
 export const makeStore = () => {
   return configureStore({
     reducer: {
-      breakPoints:BreakpointsSlice
+      General:GeneralSlice
     },
   })
 }

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import "./globals.css";
+import "@/assets/styles/globals.css";
+import "@/assets/styles/scss/main.scss";
 import { museoSans } from "@/config";
 import StoreProvider from "@/store/Providers";
 
