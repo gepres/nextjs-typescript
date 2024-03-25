@@ -5,7 +5,7 @@ import GeneralSlice from "./general/general"
 export const makeStore = () => {
   return configureStore({
     reducer: {
-      General:GeneralSlice
+      general:GeneralSlice
     },
   })
 }

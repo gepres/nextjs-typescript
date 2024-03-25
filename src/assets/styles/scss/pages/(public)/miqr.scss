@@ -1,0 +1,113 @@
+header{
+  display: flex;
+   justify-content: center;
+   padding: 3rem;
+   & img {
+     width: 200px;
+      @media screen and (max-width:960px){
+       width: 150px;
+     }
+   }
+}
+section{
+ display: flex;
+ justify-content: center;
+}
+footer{
+ text-align: center;
+ position: absolute;
+ bottom: 17px;
+  & img {
+    min-width: none 300px;
+    max-width: 800px;
+    width: 550px;
+    @media screen and (max-width:960px){
+    width: 500px;
+   }
+    @media screen and (max-width:600px){
+     width: 340px;
+   }
+  }
+}
+z-index-recatcha{
+
+z-index: 999999;
+}
+.content {
+ justify-content: flex-start;
+ align-items: center;
+ display: flex;
+ background: theme('colors.red_default');
+ flex-direction: column;
+ width: 817px;
+ height: 950px;
+ border-radius: 30px;
+ position: relative;
+ @media screen and (max-width:960px){
+ }
+ @media screen and (max-width:600px){
+   height: 850px;
+ }
+ &-header {
+   margin: 4rem 0;
+   text-emphasis: center;
+   &__logo{
+     width: 260px;
+     height: 90px;
+      @media screen and (max-width:960px){
+       width: 240px;
+       height: 70px;
+       }
+       @media screen and (max-width:600px){
+         width: 200px;
+         height: 50px;
+       }
+   }
+   &__yapeplin{
+     width: 100%;
+     justify-content: space-between;
+     display: flex;
+     margin-left: -5px;
+     margin-top: 1rem;
+     img{
+       width: 100px;
+       height: 100px;
+       @media screen and (max-width:960px){
+       width: 90px;
+       height: 90px;
+       }
+       @media screen and (max-width:600px){
+         width:80px;
+         height: 80px;
+       }
+     }
+   }
+ }
+ &-qr {
+   background: #fff;
+   display: flex;
+   width: 350px;
+   height: 400px;
+   flex-direction: column;
+   border-radius: 30px;
+   align-items: center;
+   justify-content: center;
+   & h2 {
+     font-size: 20px;
+     line-height: 30px;
+     font-weight: bold;
+     color: theme('colors.green_default');;
+     text-align: center;
+     line-break: anywhere;
+     padding: 0 20px;
+   }
+   & img {
+     width: 226px;
+     height: 226px;
+     border-radius: 15px;
+   }
+ }
+}
+.op0{
+ opacity: 0;
+}

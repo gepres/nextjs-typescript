@@ -1,19 +1,21 @@
 'use client';
 import { PayloadAction, createSlice } from '@reduxjs/toolkit'
 import { useEffect } from 'react';
-interface BreakpointsState {
+interface GeneralState {
   backoffice_url?: string;
   base_url_s3?:string,
-  endPoint: object,
+  endPoint: {
+    default: string | undefined
+  },
   roles_estaticos:object
 }
 
 
-const initialState:BreakpointsState = {
-  backoffice_url: process.env.BACKOFFICE_BASE_URL,
-  base_url_s3: process.env.BASE_URL_S3,
+const initialState:GeneralState = {
+  backoffice_url: process.env.NEXT_PUBLIC_BACKOFFICE_BASE_URL,
+  base_url_s3: process.env.NEXT_PUBLIC_BASE_URL_S3,
   endPoint:{
-    default: process.env.BASE_URL_FRONT
+    default:  process.env.NEXT_PUBLIC_BASE_URL_FRONT
   },
   roles_estaticos: {
     static_role_admin_izipay: 'izipay-admin',
@@ -27,14 +29,14 @@ const initialState:BreakpointsState = {
   },
 }
 
-const BreakpointsSlice = createSlice({
-  name: 'Breakpoints',
+const GeneralSlice = createSlice({
+  name: 'General',
   initialState,
   reducers: {
   
   }
 });
 
-export const {} = BreakpointsSlice.actions
+export const {} = GeneralSlice.actions
 
-export default BreakpointsSlice.reducer;
+export default GeneralSlice.reducer;
