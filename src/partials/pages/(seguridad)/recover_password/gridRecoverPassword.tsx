@@ -8,7 +8,6 @@ export function GridRecoverPassword (){
   const { isMobileAndTable } = useBreakpoints()
   return (
     <div>
-      {/* v-if="is_table"  */}
       {
         isMobileAndTable 
         ? 
@@ -29,7 +28,7 @@ export function GridRecoverPassword (){
           :
           <></>
         }
-            <div className='bg-blue-500'>
+            <div className=''>
               <FormRecoverPassword />
             </div>
       </div>
