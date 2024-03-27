@@ -2,7 +2,11 @@
 import { useRef, useEffect } from 'react';
 import { Provider } from 'react-redux'
 import { makeStore, AppStore, useAppSelector } from './index'
+// import { ChakraProvider } from '@chakra-ui/react'
 
+// function ProvidersChakra({ children }: { children: React.ReactNode }) {
+//   return <ChakraProvider>{children}</ChakraProvider>
+// }
 
 export default function StoreProvider({
   children,
