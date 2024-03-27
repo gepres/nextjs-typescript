@@ -29,7 +29,7 @@ export function GridRecoverPassword (){
           :
           <></>
         }
-            <div className='bg-blue-500'>
+            <div>
               <FormRecoverPassword />
             </div>
       </div>

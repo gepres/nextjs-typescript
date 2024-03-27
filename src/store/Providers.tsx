@@ -2,17 +2,23 @@
 import { useRef, useEffect } from 'react';
 import { Provider } from 'react-redux'
 import { makeStore, AppStore, useAppSelector } from './index'
-// import { ChakraProvider } from '@chakra-ui/react'
+import { ChakraProvider, extendTheme } from '@chakra-ui/react'
+import theme from '@/config/themeChakraui';
+import { ChakraProps } from '@chakra-ui/react';
 
-// function ProvidersChakra({ children }: { children: React.ReactNode }) {
-//   return <ChakraProvider>{children}</ChakraProvider>
-// }
+
+type  Props = {
+  children: React.ReactNode | React.ReactNode[]
+}
+
+function ProvidersChakra({ children }: Props) {
+  return <ChakraProvider theme={theme}>{children}</ChakraProvider>
+}
+
 
 export default function StoreProvider({
   children,
-}: {
-  children: React.ReactNode
-}) {
+}: Props) {
   const storeRef = useRef<AppStore>()
 
   if (!storeRef.current) {
@@ -20,5 +26,5 @@ export default function StoreProvider({
     storeRef.current = makeStore()
   }
 
-  return <Provider store={storeRef.current}>{children}</Provider>
+  return <ProvidersChakra><Provider store={storeRef.current}>{children}</Provider></ProvidersChakra>
 }
